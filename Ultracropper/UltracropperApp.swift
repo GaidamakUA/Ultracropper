@@ -1,17 +1,14 @@
-//
-//  UltracropperApp.swift
-//  Ultracropper
-//
-//  Created by Full Name on 29.09.2026.
-//
-
 import SwiftUI
 
 @main
 struct UltracropperApp: App {
     var body: some Scene {
-        WindowGroup {
+        WindowGroup("Ultracropper") {
             ContentView()
+        }
+        .defaultSize(width: 900, height: 700)
+        .commands {
+            CommandGroup(replacing: .newItem) {}
         }
     }
 }
